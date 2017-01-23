@@ -56,6 +56,8 @@ SRCS-$(CONFIG_RTE_LIBRTE_VOID_PMD) += trace.c
 #SYMLINK-y-include += rte_eth_void.h
 
 # this lib depends upon:
+DEPDIRS-$(CONFIG_RTE_LIBRTE_VOID_PMD) += lib/librte_eal
+DEPDIRS-$(CONFIG_RTE_LIBRTE_VOID_PMD) += lib/librte_mempool
 DEPDIRS-$(CONFIG_RTE_LIBRTE_VOID_PMD) += lib/librte_mbuf
 DEPDIRS-$(CONFIG_RTE_LIBRTE_VOID_PMD) += lib/librte_ether
 DEPDIRS-$(CONFIG_RTE_LIBRTE_VOID_PMD) += lib/librte_kvargs
