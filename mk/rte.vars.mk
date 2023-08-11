@@ -77,10 +77,12 @@ export RTE_MACHINE
 export RTE_EXEC_ENV
 export RTE_TOOLCHAIN
 
+# Fix: This version of DPDK cannot enable all warnings with GCC >= 10
+
 # developer build automatically enabled in a git tree
-ifneq ($(wildcard $(RTE_SDK)/.git),)
-RTE_DEVEL_BUILD ?= y
-endif
+# ifneq ($(wildcard $(RTE_SDK)/.git),)
+# RTE_DEVEL_BUILD ?= y
+# endif
 
 # SRCDIR is the current source directory
 ifdef S
